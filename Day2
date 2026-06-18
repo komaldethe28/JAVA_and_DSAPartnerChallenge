@@ -1,0 +1,306 @@
+# Day 2 — Variables, Data Types & Writing Your First Java Program
+
+> **DSA Partner Challenge** | Week 1: Language Basics + Maths for DSA
+
+---
+
+## 📌 Topic of the Day
+**Variables, Data_Types, Input, Output & Debugging in Java**
+---
+
+## 🧠 What to Learn Today
+
+### Variables
+
+A variable is a named container in memory that stores a value.
+
+```java
+int age;          // Declaration
+age = 21;         // Initialization
+int myAge = 21;   // Declaration + Initialization
+```
+
+#### Java Naming Convention
+
+Use **camelCase**:
+
+```java
+int myAge = 21;
+String firstName = "John";
+```
+
+Avoid:
+```java
+int my_age = 21;
+```
+
+---
+
+## Primitive Data Types in Java
+
+| Type      | Size    | Example             | Use              |
+| --------- | ------- | ------------------- | ---------------- |
+| `int`     | 4 bytes | `int x = 10;`       | Whole numbers    |
+| `long`    | 8 bytes | `long x = 100000L;` | Large integers   |
+| `double`  | 8 bytes | `double pi = 3.14;` | Decimal numbers  |
+| `float`   | 4 bytes | `float x = 3.14f;`  | Decimal numbers  |
+| `char`    | 2 bytes | `char c = 'A';`     | Single character |
+| `boolean` | 1 bit   | `boolean b = true;` | True/False       |
+| `byte`    | 1 byte  | `byte b = 127;`     | Small integers   |
+| `short`   | 2 bytes | `short s = 300;`    | Small integers   |
+
+## Non-Primitive Data Types in Java
+Sting, Array, Object
+`String` is **not** a primitive type.
+```java
+String name = "Komal";
+```
+* Uses capital `S`
+* Uses double quotes
+
+---
+
+## Type Casting
+
+### Widening (Automatic)
+
+Smaller type → Larger type
+byte -> short -> int -> float -> long -> double
+
+```java
+int num = 10;
+long value = num;
+double d = value;
+```
+No data loss.
+
+### Narrowing (Manual)
+
+Larger type → Smaller type
+
+```java
+double pi = 9.99;
+int x = (int) pi;
+```
+
+Output:
+
+```java
+9
+```
+Decimal part is removed.
+
+---
+
+## Output in Java
+
+### println()
+
+```java
+System.out.println("Hello");
+```
+Prints text and moves to next line.
+
+### print()
+
+```java
+System.out.print("Hello");
+```
+Prints text without moving to next line.
+
+### printf()
+
+```java
+String name = "Tripti";
+int age = 21;
+System.out.printf("Name: %s, Age: %d%n", name, age);
+```
+
+### Format Specifiers
+
+| Specifier | Meaning  |
+| --------- | -------- |
+| `%d`      | int      |
+| `%f`      | double   |
+| `%s`      | String   |
+| `%c`      | char     |
+| `%n`      | New line |
+
+---
+
+## Input Using Scanner
+
+```java
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        double d = sc.nextDouble();
+        String word = sc.next();
+        String line = sc.nextLine();
+        char c = sc.next().charAt(0);
+
+        sc.close();
+    }
+}
+```
+
+### Important Scanner Issue
+
+```java
+int age = sc.nextInt();
+String name = sc.nextLine();
+```
+`name` becomes empty because `nextInt()` leaves a newline character in the buffer.
+Fix:
+```java
+int age = sc.nextInt();
+sc.nextLine();
+String name = sc.nextLine();
+```
+
+---
+
+## Debugging Basics
+
+### 1. Syntax Error
+
+Wrong Java grammar.
+```java
+int x = 10
+```
+Missing semicolon.
+
+---
+
+### 2. Runtime Error
+
+Program compiles but crashes during execution.
+```java
+int x = 10 / 0;
+```
+Causes:
+```text
+ArithmeticException
+```
+
+---
+
+### 3. Logic Error
+
+Program runs but gives wrong output.
+```java
+int a = 10;
+int b = 20;
+System.out.println(a - b);
+```
+Expected addition but wrote subtraction.
+
+---
+
+## Debugging Checklist
+
+When code doesn't work:
+
+* Read the complete error message
+* Check variable names
+* Check brackets and semicolons
+* Verify loop conditions
+* Check `=` vs `==`
+* Add `System.out.println()` statements to inspect values
+* Use debugger and breakpoints in IDE
+
+---
+
+## 💻 Practice Questions
+
+### 1. Even or Odd
+Take an integer input and print whether it is even or odd.
+
+---
+
+### 2. Greeting Program
+Input:
+
+```text
+Komal
+```
+
+Output:
+
+```text
+Hello Komal, welcome!
+```
+
+---
+
+### 3. Simple Interest Calculator
+
+Formula:
+```text
+SI = (P × T × R) / 100
+```
+Take Principal, Time and Rate as input.
+
+---
+
+### 4. INR to USD Converter
+Take amount in INR and convert to USD.
+Use:
+```text
+1 USD = 83.5 INR
+```
+Formula:
+```java
+usd = inr / 83.5;
+```
+
+---
+
+### 5. Fibonacci Series
+Input:
+```text
+7
+```
+Output:
+```text
+0 1 1 2 3 5 8
+```
+
+---
+
+### 6. Palindrome String
+Input:
+```text
+racecar
+```
+Output:
+```text
+Palindrome
+```
+Input:
+```text
+hello
+```
+Output:
+```text
+Not a Palindrome
+```
+
+---
+
+### 7. Armstrong Numbers
+Find all Armstrong numbers between two given numbers.
+Example:
+```text
+153 = 1³ + 5³ + 3³
+```
+Output:
+```text
+153
+```
+---
