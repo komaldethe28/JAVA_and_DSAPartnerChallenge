@@ -12,3 +12,5 @@ Index of day files:
 
 - Day 4 : Loops, Nested Loops, Break and Continue & Pattern Problems in Java
  — [Day4-Loops.md](Day4-Loops.md)
+
+- Day 5 : Function and Methods — [Day5-Function&Method.md](Day5-Function&Method.md)
