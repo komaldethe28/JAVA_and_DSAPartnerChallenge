@@ -14,3 +14,5 @@ Index of day files:
  — [Day4-Loops.md](Day4-Loops.md)
 
 - Day 5 : Function and Methods — [Day5-Function&Method.md](Day5-Function&Method.md)
+
+- Day 6 : Function and Methods Practice — [Day6-FunctionPractice.md](Day6-FunctionPractice.md)
