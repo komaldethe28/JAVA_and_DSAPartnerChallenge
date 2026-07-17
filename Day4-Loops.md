@@ -436,16 +436,7 @@ line = 1 to 4
 star = 1 to line
 ```
 ## Code
-```java
-for(int line = 1; line <= 4; line++)
-{
-    for(int star = 1; star <= line; star++)
-    {
-        System.out.print("*");
-    }
-    System.out.println();
-}
-```
+Source: [Patterns/HalfPyramid.java](Patterns/HalfPyramid.java)
 
 ---
 
@@ -470,18 +461,7 @@ Formula:
 stars = n - line + 1
 ```
 ## Code
-```java
-int n = 4;
-
-for(int line = 1; line <= n; line++)
-{
-    for(int star = 1; star <= n - line + 1; star++)
-    {
-        System.out.print("*");
-    }
-    System.out.println();
-}
-```
+Source: [Patterns/InvertedHalfPyr.java](Patterns/InvertedHalfPyr.java)
 
 ---
 
@@ -509,16 +489,8 @@ line = 1 to 4
 number = 1 to line
 ```
 ## Code
-```java
-for(int line = 1; line <= 4; line++)
-{
-    for(int num = 1; num <= line; num++)
-    {
-        System.out.print(num);
-    }
-    System.out.println();
-}
-```
+Source: [Patterns/HalfPyramidNum.java](Patterns/HalfPyramidNum.java)
+
 ### Output
 ```text
 1
@@ -533,22 +505,8 @@ for(int line = 1; line <= 4; line++)
 ## Problem
 Print characters continuously in pyramid form.
 ## Code
-```java
-public class Ptn4 {
-    public static void main(String[] args) {
+Source: [Patterns/CharacterPyr.java](Patterns/CharacterPyr.java)
 
-        char ch = 'A';
-        int n = 4;
-        for(int i = 1; i <= n; i++) {
-            for(int j = 1; j <= i; j++) {
-                System.out.print(ch);
-                ch++;
-            }
-            System.out.println();
-        }
-    }
-}
-```
 ### Output
 ```text
 A
